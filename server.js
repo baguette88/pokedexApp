@@ -71,11 +71,11 @@ app.delete('/pokedex/:indexOfPokedexArray', (req, res) => {
 })
 
 //EDIT//
-app.get('/fruits/:index/edit', (req, res)=>{
+app.get('/pokedex/:index/edit', (req, res)=>{
 	res.render(
 		'edit.ejs', //render views/edit.ejs
 		{ //pass in an object that contains
-			fruit: fruits[req.params.index], //the fruit object
+			fruit: pokedex[req.params.index], //the fruit object
 			index: req.params.index //... and its index in the array
 		}
 	)
@@ -83,14 +83,14 @@ app.get('/fruits/:index/edit', (req, res)=>{
 
 
 //UPDATE
-app.put('/fruits/:index', (req, res) => { // :index is the index of our fruits array that we want to change
+app.put('/pokedex/:index', (req, res) => { // :index is the index of our pokedex array that we want to change
 	if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
 		req.body.readyToEat = true
 	} else { //if not checked, req.body.readyToEat is undefined
 		req.body.readyToEat = false
 	}
-	fruits[req.params.index] = req.body //in our fruits array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
-	res.redirect('/fruits'); //redirect to the index page
+	pokedex[req.params.index] = req.body //in our pokedex array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
+	res.redirect('/pokedex'); //redirect to the index page
 })
   
   
