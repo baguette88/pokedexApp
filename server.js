@@ -75,7 +75,7 @@ app.get('/pokedex/:index/edit', (req, res)=>{
 	res.render(
 		'edit.ejs', //render views/edit.ejs
 		{ //pass in an object that contains
-			fruit: pokedex[req.params.index], //the fruit object
+			pokedex: pokedex[req.params.index], //the pokedex object
 			index: req.params.index //... and its index in the array
 		}
 	)

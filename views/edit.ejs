@@ -3,26 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="/css/style.css">
+       
         <link rel="stylesheet" href="/normalize.css">
         <link rel="stylesheet" href="/skeleton.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
+ 
 <div class="container">
-
-    <h1>Edit Fruit Page</h1>
+  <div class="banner">    <h1>Edit Pokemon</h1></div>
+    <h1>Edit Pokedex Page</h1>
       <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" value="<%=fruit.name%>"/>
+        <input type="text" name="name" id="name" value="<%=pokedex.name%>"/>
         <label for="color">Color</label>
-        <input type="text" name="color" id="color" value="<%=fruit.color%>"/>
-        <label for="isReadyToEat">Is Ready to Eat</label>
-        <input type="checkbox" name="readyToEat" id="isReadyToEat"
-        <% if(fruit.readyToEat === true){ %>
-  				checked
+        <input type="text" name="color" id="color" value="<%=pokedex.color%>"/>
+        <label for="captured">Is Ready to Eat</label>
+        <input type="checkbox" name="captured" id="captured"
+         <!-- <% if(pokedex.captured === true){ %>
+  				checked  -->
   			<% } %>
         />
-        <input type="submit" value="Edit Fruit">
+        <input type="submit" value="Edit Pokedex">
       </form> <br>
       <button><a href="/pokedex">Back to Index</a></button>
     </div> <br>

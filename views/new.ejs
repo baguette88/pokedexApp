@@ -3,14 +3,17 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="/css/style.css">
+     
         <link rel="stylesheet" href="/normalize.css">
         <link rel="stylesheet" href="/skeleton.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-<div class="container">
 
-      <h1>New Pokemon</h1>
+<div class="container">
+    <div class="banner">    <h1>Who's That Pokemon?</h1></div>
+      <h1>New Pokemon</h1> 
+      <button><a href="/pokedex">Back to Index></a></button> <br>
       <form action="/pokedex" method="POST" style="float: left">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" placeholder="product or service..."/>
@@ -18,16 +21,18 @@
         <input type="text" name="id" id="id" placeholder="id#" />
         <label for="type">Type</label>
         <input type="text" name="type" id="type" placeholder= "pokemon type" />
-        <label for="tags">Stats</label>
-        <input type="text" name="tags" id="tags" placeholder="tags" />
-        <!-- <label for="date">Date</label>
-        <input type="text" name="date" id="date" placeholder="Ex: April 11" /> -->
+        <!-- <label for="trainer">Pokemon Trainer</label>
+        <input type="text" name="trainer" id="trainer" placeholder="trainer name (Your name here)"/> -->
+        <!-- <label for="tags">Stats</label>
+        <input type="text" name="tags" id="tags" placeholder="tags" /> -->
+  
          <label for="captured">Captured</label>
         <input type="checkbox" name="captured" id="captured" />
  <br>     <br>  <input type="submit" value="Create Pokedex Entry">
-      </form>
+      </form> <br>
+     
     </div> <br>
-    <button><a href="/pokedex">Back to Index</a></button>
+
     </body>
 </html>
 
