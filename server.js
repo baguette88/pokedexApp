@@ -84,16 +84,14 @@ app.get('/pokedex/:index/edit', (req, res)=>{
 
 //UPDATE
 app.put('/pokedex/:index', (req, res) => { // :index is the index of our pokedex array that we want to change
-	if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-		req.body.readyToEat = true
-	} else { //if not checked, req.body.readyToEat is undefined
-		req.body.readyToEat = false
-	}
+	// if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
+	// 	req.body.readyToEat = true
+	// } else { //if not checked, req.body.readyToEat is undefined
+	// 	req.body.readyToEat = false
+	// }
 	pokedex[req.params.index] = req.body //in our pokedex array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
 	res.redirect('/pokedex'); //redirect to the index page
 })
-  
-  
 
 // Listener //
 app.listen(PORT, () => {

@@ -15,6 +15,8 @@
   <h1>Welcome to your Pokedex!</h1>
   <nav>
    <button> <a href="/pokedex/new">Create a Pokemon</a> </button><br> <br>
+   <!-- <button> <a href="/pokedex/:index">Update</a> </button><br> <br> -->
+  
 </nav>
   <table>
     <tr>
@@ -38,7 +40,6 @@
               <td>    <!-- <%= pokedex[i].img %>  </td>   -->
           <td>        <%= pokedex[i].type %>  </td> 
           <td>        <%= pokedex[i].stats.hp %>  </td> 
-          <!--  -->
         
           <td>       <form action="/pokedex/<%= i %> ?_method=DELETE" method="POST"> <input type="submit" style="float: right;" value="DELETE" /> </form> </td> 
   
