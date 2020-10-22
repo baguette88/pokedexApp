@@ -7,17 +7,19 @@
 
   <link rel="stylesheet" href="/normalize.css">
   <link rel="stylesheet" href="/skeleton.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/style.css">
   <title>Pokemon Profile</title>
-  <button style="width: 100px;"><a href="/pokedex">Index</a></button>
+
 </head>
 <body>
 
 <div class="container">
-  <div class="banner">    <h1> <%= pokedex.id %> </h1></div>
+  <div class="banner">    <h1>Pokemon </h1></div>
+  <button style="width: 100px;"><a href="/pokedex">Index</a></button>
+
   <h1 style="font-weight: bold;"><%= pokedex.name %> </h1>
  <h3> <p>
- <!-- <span style="font-weight: bold;"> Name: </span> <%= pokedex.name %>   <br> -->
+ <span style="font-weight: bold;"> Name: </span> <%= pokedex.name %>   <br>
  <span style="font-weight: bold;">ID: </span>  <%= pokedex.id %>     <br>
  
  <span style="font-weight: bold;">Type: </span>  <%= pokedex.type %>   <br>
@@ -32,7 +34,7 @@
  <span style="font-weight: bold;">Special Defense: </span> <%= pokedex.stats.spdefense %> <br> </h3>
 
  <br>
-<!-- <button> <a href="/pokedex/:index">Update</a> </button><br> <br> -->
+
 </h3>  
     
  <% if (pokedex.captured === true) { %>

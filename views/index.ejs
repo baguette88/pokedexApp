@@ -35,17 +35,17 @@
     </tr>
     
 
-    <% for (let i = 0; i < pokedex.length; i++) { %> 
+    <% for (let i = 0; i < allPokedex.length; i++) { %> 
       <tr> 
-      <!-- <a href="/budget/<%= i %>"> Examine </a> -->
+      
           <td> <a href="/pokedex/<%= i %>"> 
-                     <%= pokedex[i].name %> </a>  </td>             
-          <td>       <%= pokedex[i].id %>  </td> 
-  
-          <td>        <%= pokedex[i].type %>  </td> 
-          <td>        <%= pokedex[i].stats.speed %>  </td> 
-          <td>        <%= pokedex[i].stats.hp %>  </td> 
-          <td>       <form action="/pokedex/<%= i %> ?_method=UPDATE" method="POST"> <input type="submit" style="float: right;" value="UPDATE" /> </form> </td> 
+                     <%= allPokedex[i].name %> </a>  </td>             
+          <td>       <%= allPokedex[i].id %>  </td> 
+         
+          <td>        <%= allPokedex[i].type %>  </td> 
+          <td>        <%= allPokedex[i].stats.speed %>  </td> 
+          <td>        <%= allPokedex[i].stats.hp %>  </td>  
+           <td>      <a href="/pokedex/<%= i %>/edit">Update</a> </td>  
           <td>       <form action="/pokedex/<%= i %> ?_method=DELETE" method="POST"> <input type="submit" style="float: right;" value="DELETE" /> <i class="fas fa-trash-alt"></i></form> </td> 
   
       
@@ -53,7 +53,7 @@
         </tr>
     <% } %>
   </table>  
-  
+
 </div>
 </body>
 </html>
